@@ -83,7 +83,8 @@ export default async function WorkDetail({
           <div>
             <h2 className="text-2xl font-bold mb-4">工夫した点</h2>
             <ul className="list-disc pl-5 space-y-2">
-              {work.devised.map((d, i) => (
+              {/* {work.devised.map((d, i) => ( */}
+              {(work.devised ?? []).map((d, i) => (
                 <li key={i} className="text-sm text-muted-foreground leading-loose">
                   {d}
                 </li>
@@ -94,7 +95,8 @@ export default async function WorkDetail({
           <div>
             <h2 className="text-2xl font-bold mb-4">苦労した点</h2>
             <ul className="space-y-2">
-              {work.struggled.map((d, i) => (
+              {/* {work.struggled.map((d, i) => ( */}
+              {(work.struggled ?? []).map((d, i) => (
                 <li key={i} className="text-sm text-muted-foreground leading-loose">
                   {d}
                 </li>
@@ -142,15 +144,17 @@ export default async function WorkDetail({
         </div>
 
         {/* 右側：画像 */}
-        <div className="rounded-xl overflow-hidden border border-border bg-muted relative h-64 md:h-80 lg:h-[360px]">
-          <Image
-            src={work.img}
-            alt={work.title}
-            fill
-            className="object-cover object-top"
-            priority
-          />
-        </div>
+        {work.img && (
+          <div className="rounded-xl overflow-hidden border border-border bg-muted relative h-64 md:h-80 lg:h-[360px]">
+            <Image
+              src={work.img}
+              alt={work.title}
+              fill
+              className="object-cover object-top"
+              priority
+            />
+          </div>
+        )}
       </div>
 
       {/* タグ */}
