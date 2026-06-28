@@ -28,6 +28,7 @@ export type Work = {
   subtitle: string;
   tags: string[];
   desc: string;
+  purpose?: string;
   devised: string[];
   struggled: string[];
   img: string;
@@ -73,9 +74,77 @@ export const WORKS: Work[] = [
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010",
   },
+  
 ];
 
 export const OTHER_WORKS = [
+  {
+    slug: "furima",
+    title: "メルカリ風フリマアプリ",
+    subtitle: "商品出品・購入機能を備えたフリマアプリ",
+    tags: [
+      "Laravel 8",
+      "nginx 1.21.1",
+      "PHP 8.0",
+      "HTML",
+      "CSS",
+      "MySQL 8.0.26",
+      "Sanctum",
+      "FormRequest",
+      "Storage",
+    ],
+    desc: "以前から実装していたフリマアプリに対して、UI改善や基本機能の整理を行い、その後SPA開発でのフリマアプリにおいて、商品一覧・出品・購入の流れが自然につながるよう意識して実装しました。",
+    purpose:
+      "商品一覧、商品詳細、出品、購入までの流れを分かりやすく整理し、ユーザーが迷わず操作できるフリマアプリを目指しました。",
+    devised: [
+      "商品一覧・出品・詳細の流れを分かりやすく整理",
+      "ユーザーが使いやすいよう、画面遷移をシンプルに設計",
+      "フリマらしい操作感を意識して実装",
+    ],
+    struggled: [
+      "出品から購入までの流れを自然につなげる点に苦労しました。",
+      "商品情報の表示や操作の順番が分かりにくくならないよう、画面ごとの役割を整理しました。",
+      "一覧・詳細・入力画面のつながりを何度も見直して調整しました。",
+    ],
+    img: "/images/furima.png",
+    github: "https://github.com/shoyama1010/tech-furima",
+    demo: "",
+  },
+  {
+    slug: "attendance",
+    title: "勤怠打刻管理アプリ",
+    subtitle: "勤怠打刻・修正申請・管理者承認アプリ",
+    tags: [
+      "Laravel 8",
+      "nginx 1.21.1",
+      "PHP 8.0",
+      "HTML",
+      "CSS",
+      "MySQL 8.0.26",
+      "Fortify",
+      "Sanctum",
+      "Next.js 14",
+      "React",
+      "TypeScript",
+    ],
+    desc: "一般従業員・管理者を想定し、勤怠打刻から勤怠修正申請、管理者側での承認までを実装した勤怠管理アプリです。",
+    purpose:
+      "一般従業員と管理者の操作を分け、勤怠打刻・修正申請・承認までの流れを分かりやすく管理できることを目的としました。",
+    devised: [
+      "打刻の登録・確認がしやすい構成に調整",
+      "勤怠データを一覧で見やすく表示するように実装",
+      "基本操作を直感的に使えるように画面設計を整理",
+    ],
+    struggled: [
+      "打刻処理をシンプルにしながら、一覧表示との整合性を保つ点に苦労しました。",
+      "出勤・退勤の状態が分かりやすく伝わるよう、表示内容やボタンの切り替えを調整しました。",
+      "基本機能を崩さずに見やすさを整えることを意識して実装しました。",
+    ],
+    img: "/images/attendance.png",
+    github: "https://github.com/shoyama1010/atte-api",
+    demo: "",
+  },
+
   {
     title: "体重管理アプリ",
     tags: ["Laravel 8", "PHP 7.4.9", "MySQL 8.0.26", "JavaScript", "Fortify"],
@@ -86,7 +155,7 @@ export const OTHER_WORKS = [
     title: "フルーツ販売アプリ",
     tags: ["Laravel", "PHP", "MySQL"],
     github: "https://github.com/shoyama1010",
-    desc: "EC機能を持つフルーツ販売サイト。商品一覧・カート・購入フローを実装。",
+    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索&商品登録等を実装。",
   },
 ];
 
