@@ -58,7 +58,8 @@ export default function About() {
                   <p className="text-xs font-mono text-primary mb-0.5">{t.year}</p>
                   <p className="text-sm font-semibold mb-1">{t.label}</p>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    {t.detail}
+                    {/* {t.detail} */}
+                    {t.summary ?? t.detail}
                   </p>
                 </div>
               </div>
