@@ -4,7 +4,7 @@ export const SKILLS = [
     title: "バックエンド技術",
     sub: "Laravel / PHP",
     desc: "PHP・Laravelを利用したWebアプリケーション開発。認証機能、CRUD処理、データベース設計などを（実務に近い）個人開発で経験しています。",
-    tags: ["PHP", "Laravel", "MySQL", "Fortify", "FormRequest"],
+    tags: ["PHP", "Laravel", "MySQL", "Api/Sanctum", "Fortify", "FormRequest"],
   },
   {
     icon: "code",
@@ -18,7 +18,7 @@ export const SKILLS = [
     title: "インフラ技術",
     sub: "Docker / AWS",
     desc: "Git/GitHub・Docker・VSCode・Linux/Ubuntuを利用した環境構築。",
-    tags: ["Git", "GitHub", "Docker", "AWS", "Linux", "Nginx"],
+    tags: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux", "Nginx"],
   },
 ];
 
