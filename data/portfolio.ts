@@ -32,7 +32,7 @@ export type Work = {
   devised: string[];
   struggled: string[];
   img: string;
-  github?: string;
+  github ?: string;
   demo?: string;
 };
 
@@ -41,7 +41,20 @@ export const WORKS: Work[] = [
     slug: "zaiko",
     title: "商品在庫管理アプリ",
     subtitle: "医薬品卸倉庫向け在庫管理システム",
-    tags: ["Laravel 10", "Nginx 1.21.1", "PHP 8.0", "MySQL 8.0.26", "Fortify", "MUI"],
+    tags: [
+      "Laravel 10",
+      "Nginx 1.21.1",
+      "PHP 8.0",
+      "MySQL 8.0.26",
+      "Fortify",
+      "Api/Sanctum",
+      "MailHog",
+      "MUI(Material UI)",
+      "Formrequest",
+      "React",
+      "TypeScript",
+      "React Router",
+    ],
     desc: "医薬品卸倉庫向けの在庫管理システムで、入庫・出庫・在庫・履歴管理を簡素化し、現場の効率を大幅に向上させます。",
     devised: [
       "ロット単位の在庫管理を実装",
@@ -54,13 +67,21 @@ export const WORKS: Work[] = [
       "在庫数の整合性を保つトランザクション処理",
     ],
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010",
+    github: "https://github.com/shoyama1010/drugs-stock-app",
   },
   {
     slug: "rese",
     title: "Rest予約店舗アプリ",
     subtitle: "総合的な飲食店予約管理システム",
-    tags: ["Laravel 8", "nginx 1.21.1", "PHP 8.0", "MySQL 8.0.26", "Fortify", "JavaScript"],
+    tags: [
+      "Laravel 8",
+      "nginx 1.21.1",
+      "PHP 8.0",
+      "MySQL 8.0.26",
+      "Fortify",
+      "JavaScript",
+
+    ],
     desc: "Laravelを用いて、ユーザーが簡単に予約できる総合的な予約管理システムを開発しました。",
     devised: [
       "予約の登録・確認がしやすい画面構成に調整",
@@ -72,9 +93,8 @@ export const WORKS: Work[] = [
       "予約ステータスの複雑な分岐処理",
     ],
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010",
+    github: "https://github.com/shoyama1010/rese",
   },
-  
 ];
 
 export const OTHER_WORKS = [
@@ -154,7 +174,7 @@ export const OTHER_WORKS = [
   {
     title: "フルーツ販売アプリ",
     tags: ["Laravel", "PHP", "MySQL"],
-    github: "https://github.com/shoyama1010",
+    github: "https://github.com/shoyama1010/fruit-furima-spa",
     desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索&商品登録等を実装。",
   },
 ];
