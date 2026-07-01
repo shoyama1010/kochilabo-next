@@ -47,6 +47,7 @@ export default function Works() {
                   <p className="text-xs text-muted-foreground mb-3">{w.subtitle}</p>
                   <p className="text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
                 </div>
+                
                 <p className="flex items-center gap-1.5 text-xs font-mono text-primary mt-5 group-hover:gap-2.5 transition-all">
                   詳細ページへ <ArrowRight size={12} />
                 </p>

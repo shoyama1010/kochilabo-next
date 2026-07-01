@@ -5,26 +5,21 @@ import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Tag } from "@/components/Tag";
-import { WORKS, OTHER_WORKS } from "@/data/portfolio";
+import { WORKS } from "@/data/portfolio";
 
-// const ALL_WORKS = [...WORKS, ...OTHER_WORKS];
-const ALL_WORKS = [...WORKS, ...OTHER_WORKS].filter(
-  (work) => typeof work.slug === "string" && work.slug.length > 0
-);
-
-// SSG: ビルド時に全作品のページを生成する
+// メイン作品のみ詳細ページを生成
 export function generateStaticParams() {
-  return ALL_WORKS.map((w) => ({ slug: w.slug }));
+  return WORKS.map((w) => ({ slug: w.slug }));
 }
 
-// ページごとのメタデータを動的に生成
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const work = ALL_WORKS.find((w) => w.slug === slug);
+
+  const work = WORKS.find((w) => w.slug === slug);
 
   if (!work) return {};
 
@@ -40,7 +35,8 @@ export default async function WorkDetail({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const work = ALL_WORKS.find((w) => w.slug === slug);
+
+  const work = WORKS.find((w) => w.slug === slug);
 
   if (!work) notFound();
 
@@ -55,12 +51,13 @@ export default async function WorkDetail({
       />
 
       <div className="grid lg:grid-cols-2 gap-10 items-start mt-8">
-        {/* 左側：本文 */}
+        {/* 左側 */}
         <div className="space-y-8">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold mb-3">
               {work.title}
             </h1>
+
             <p className="text-muted-foreground text-sm leading-loose">
               {work.subtitle}
             </p>
@@ -68,6 +65,7 @@ export default async function WorkDetail({
 
           <div>
             <h2 className="text-2xl font-bold mb-4">目的</h2>
+
             <p className="text-sm text-muted-foreground leading-loose">
               {work.purpose ?? work.desc}
             </p>
@@ -75,18 +73,24 @@ export default async function WorkDetail({
 
           <div>
             <h2 className="text-2xl font-bold mb-4">使用技術</h2>
-            <p className="text-sm text-muted-foreground leading-loose">
-              {work.tags.join(" / ")}
-            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {work.tags.map((tag) => (
+                <Tag key={tag} text={tag} />
+              ))}
+            </div>
           </div>
 
           <div>
             <h2 className="text-2xl font-bold mb-4">工夫した点</h2>
-            <ul className="list-disc pl-5 space-y-2">
-              {/* {work.devised.map((d, i) => ( */}
-              {(work.devised ?? []).map((d, i) => (
-                <li key={i} className="text-sm text-muted-foreground leading-loose">
-                  {d}
+
+            <ul className="list-disc pl-6 space-y-2">
+              {work.devised.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-sm text-muted-foreground leading-loose"
+                >
+                  {item}
                 </li>
               ))}
             </ul>
@@ -94,42 +98,44 @@ export default async function WorkDetail({
 
           <div>
             <h2 className="text-2xl font-bold mb-4">苦労した点</h2>
-            <ul className="space-y-2">
-              {/* {work.struggled.map((d, i) => ( */}
-              {(work.struggled ?? []).map((d, i) => (
-                <li key={i} className="text-sm text-muted-foreground leading-loose">
-                  {d}
+
+            <ul className="list-disc pl-6 space-y-2">
+              {work.struggled.map((item, index) => (
+                <li
+                  key={index}
+                  className="text-sm text-muted-foreground leading-loose"
+                >
+                  {item}
                 </li>
               ))}
             </ul>
           </div>
 
           <div>
-            <h2 className="text-2xl font-bold mb-4">デモ/GitHub</h2>
-            <div className="flex flex-col gap-3">
-              {work.demo ? (
-                <a
-                  href={work.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-bold text-primary inline-flex items-center gap-2 hover:opacity-70"
-                >
-                  <ExternalLink size={16} />
-                  デモを見る
-                </a>
-              ) : (
-                <p className="text-sm text-muted-foreground">デモなし</p>
-              )}
+            <h2 className="text-2xl font-bold mb-4">GitHub / Demo</h2>
 
+            <div className="flex flex-col gap-3">
               {work.github && (
                 <a
                   href={work.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-bold text-primary inline-flex items-center gap-2 hover:opacity-70"
+                  className="inline-flex items-center gap-2 text-primary hover:opacity-70"
                 >
-                  <Github size={16} />
-                  GitHub：{work.github}
+                  <Github size={18} />
+                  GitHub Repository
+                </a>
+              )}
+
+              {work.demo && (
+                <a
+                  href={work.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-primary hover:opacity-70"
+                >
+                  <ExternalLink size={18} />
+                  Demo Site
                 </a>
               )}
             </div>
@@ -137,32 +143,21 @@ export default async function WorkDetail({
 
           <Link
             href="/works"
-            className="inline-flex bg-secondary text-secondary-foreground px-8 py-3 rounded text-sm font-bold hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="inline-flex bg-primary text-white px-6 py-3 rounded-lg hover:opacity-90 transition"
           >
-            作品一覧へ戻る
+            ← 作品一覧へ戻る
           </Link>
         </div>
 
-        {/* 右側：画像 */}
-        {work.img && (
-          <div className="rounded-xl overflow-hidden border border-border bg-muted relative h-64 md:h-80 lg:h-[360px]">
-            <Image
-              src={work.img}
-              alt={work.title}
-              fill
-              className="object-cover object-top"
-              priority
-            />
-          </div>
-        )}
-      </div>
-
-      {/* タグ */}
-      <div className="mt-12 border-t border-border pt-6">
-        <div className="flex flex-wrap gap-1.5">
-          {work.tags.map((t) => (
-            <Tag key={t} text={t} />
-          ))}
+        {/* 右側 */}
+        <div className="rounded-xl overflow-hidden border border-border bg-muted relative h-72 lg:h-[420px]">
+          <Image
+            src={work.img}
+            alt={work.title}
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
       </div>
     </section>
