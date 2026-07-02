@@ -5,6 +5,7 @@
 # 使用技術
 - Ｎext.js
 - Tailwind CSS(SSG仕様)
+- typescript
 
 # ローカルURL
 http://localhost:3000/
