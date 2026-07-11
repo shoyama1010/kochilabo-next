@@ -96,8 +96,9 @@ export const WORKS: Work[] = [
       "基本機能を崩さずに見やすさを整えることを意識して実装",
     ],
     img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/atte-api",
+    // github: "https://github.com/shoyama1010/atte-api",
   },
+  
   {
     slug: "furima",
     title: "メルカリ風フリマアプリ",
@@ -122,11 +123,11 @@ export const WORKS: Work[] = [
       "複数画像のアップロードとプレビュー表示の実装",
     ],
     img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/tech-furima",
+    // github: "https://github.com/shoyama1010/tech-furima",
   },
 
   {
-    slug: "rese",
+    slug: "store-rese",
     title: "Rest予約店舗アプリ",
     subtitle: "総合的な飲食店予約管理システム",
     tags: [
@@ -157,8 +158,16 @@ export const OTHER_WORKS: Work[] = [
     slug: "weight-control",
     title: "体重管理アプリ",
     subtitle: "体重記録・分析用の管理アプリ",
-    tags: ["Laravel 8", "PHP 7.4.9", "MySQL 8.0.26", "JavaScript", "Fortify"],
-    desc: "体重変化を記録・分析するために作成。CSV出力やレポート機能も実装し、データを活用しやすくしています。",
+    tags: [
+      "Laravel 8",
+      "Nginx 1.21.1",
+      "PHP 7.4.9",
+      "html/css",
+      "MySQL 8.0.26",
+      "JavaScript",
+      "Fortify",
+    ],
+    desc: "体重変化を記録・分析するために作成。CSV出力やレポート機能も実装し、データを活用しやすくしています。今後UI機能やデータのchart形式にも充実させる予定です",
     devised: [
       "体重データを日付ごとに管理できるように実装",
       "入力・一覧・編集の流れを分かりやすく整理",
@@ -167,15 +176,27 @@ export const OTHER_WORKS: Work[] = [
       "記録データの表示と更新処理の整合性を保つ点に苦労しました",
       "入力フォームと一覧表示の使いやすさを調整しました",
     ],
+
     img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/weight-control",
   },
+
   {
     slug: "fruit-furima",
     title: "フルーツ販売アプリ",
     subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
-    tags: ["Laravel", "PHP", "MySQL", "Api/Sanctum", "formrequest"],
-    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。",
+    tags: [
+      "Laravel",
+      "Nginx 1.21.1",
+      "PHP8.0",
+      "CSS(Tailwind CSS)",
+      "MySQL 8.0.26",
+      "Api/Sanctum",
+      "storage",
+      "FormRequest",
+    ],
+
+    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
     devised: [
       "商品一覧と検索機能を分かりやすく整理",
       "商品登録機能を実装し、管理しやすい構成にしました",
