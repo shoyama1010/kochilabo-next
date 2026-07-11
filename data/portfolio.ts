@@ -11,7 +11,7 @@ export const SKILLS = [
     title: "フロントエンド技術",
     sub: "React / Next.js",
     desc: "HTML / CSS / JavaScript を用いたレスポンシブ対応サイト制作。ReactによるSPA開発やコンポーネント設計について、学習及び実務に近い個人開発をしています。",
-    tags: ["HTML", "CSS", "JavaScript", "React", "Next.js", "MUI"],
+    tags: ["HTML", "CSS", "JavaScript", "Node.js", "React", "Next.js", "Vite", "MUI"],
   },
   {
     icon: "cloud",
@@ -96,7 +96,7 @@ export const WORKS: Work[] = [
       "基本機能を崩さずに見やすさを整えることを意識して実装",
     ],
     img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
-    // github: "https://github.com/shoyama1010/atte-api",
+    github: "https://github.com/shoyama1010/atte-api",
   },
   
   {
@@ -123,7 +123,7 @@ export const WORKS: Work[] = [
       "複数画像のアップロードとプレビュー表示の実装",
     ],
     img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
-    // github: "https://github.com/shoyama1010/tech-furima",
+    github: "https://github.com/shoyama1010/tech-furima",
   },
 
   {
@@ -149,7 +149,8 @@ export const WORKS: Work[] = [
       "予約ステータスの複雑な分岐処理",
     ],
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/rese",
+    // github: "https://github.com/shoyama1010/rese",
+    github: "https://github.com/shoyama1010/store-rese"
   },
 ];
 
