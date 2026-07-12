@@ -68,6 +68,7 @@ export const WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/drugs-stock-app",
+    demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal"
   },
 
   {
