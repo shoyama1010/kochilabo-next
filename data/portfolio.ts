@@ -181,6 +181,7 @@ export const OTHER_WORKS: Work[] = [
 
     img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/weight-control",
+    demo: "https://weight-control-production.up.railway.app/"
   },
 
   {
