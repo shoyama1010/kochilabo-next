@@ -6,6 +6,7 @@ export const SKILLS = [
     desc: "PHP・Laravelを利用したWebアプリケーション開発。認証機能、CRUD処理、データベース設計などを（実務に近い）個人開発で経験しています。",
     tags: ["PHP", "Laravel", "MySQL", "Api/Sanctum", "Fortify", "FormRequest"],
   },
+
   {
     icon: "code",
     title: "フロントエンド技術",
@@ -13,12 +14,13 @@ export const SKILLS = [
     desc: "HTML / CSS / JavaScript を用いたレスポンシブ対応サイト制作。ReactによるSPA開発やコンポーネント設計について、学習及び実務に近い個人開発をしています。",
     tags: ["HTML", "CSS", "JavaScript", "Node.js", "React", "Next.js", "Vite", "MUI"],
   },
+
   {
     icon: "cloud",
     title: "インフラ技術",
     sub: "Docker / AWS",
     desc: "Git/GitHub・Docker・VSCode・Linux/Ubuntuを利用した環境構築。",
-    tags: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux", "Nginx"],
+    tags: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux", "Nginx", "VSCode", "Railway"],
   },
 ];
 
@@ -181,7 +183,7 @@ export const OTHER_WORKS: Work[] = [
 
     img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/weight-control",
-    demo: "https://weight-control-production.up.railway.app/"
+    demo: "https://weight-control-production.up.railway.app",
   },
 
   {
