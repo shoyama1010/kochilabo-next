@@ -86,6 +86,17 @@ export default function Works() {
               >
                 <Github size={13} /> GitHub
               </a>
+
+              {w.demo && (
+                <a
+                  href={w.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs font-mono text-primary hover:underline"
+                >
+                  Demo ↗
+                </a>
+              )}
             </div>
           </div>
         ))}

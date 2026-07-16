@@ -152,15 +152,14 @@ export const WORKS: Work[] = [
       "予約ステータスの複雑な分岐処理",
     ],
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
-    // github: "https://github.com/shoyama1010/rese",
     github: "https://github.com/shoyama1010/store-rese"
   },
 ];
 
 export const OTHER_WORKS: Work[] = [
   {
-    slug: "weight-control",
-    title: "体重管理アプリ",
+    slug: "BODY-control",
+    title: "体重管理アプリ(BODYCON)",
     subtitle: "体重記録・分析用の管理アプリ",
     tags: [
       "Laravel 8",
@@ -170,6 +169,7 @@ export const OTHER_WORKS: Work[] = [
       "MySQL 8.0.26",
       "JavaScript",
       "Fortify",
+      "Chart.js",
     ],
     desc: "体重変化を記録・分析するために作成。CSV出力やレポート機能も実装し、データを活用しやすくしています。今後UI機能やデータのchart形式にも充実させる予定です",
     devised: [
