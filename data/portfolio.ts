@@ -41,7 +41,7 @@ export type Work = {
 export const WORKS: Work[] = [
   {
     slug: "zaiko",
-    title: "商品在庫管理アプリ",
+    title: "ドラックストア向けアプリ",
     subtitle: "医薬品卸倉庫向け在庫管理システム",
     tags: [
       "Laravel 10",
@@ -70,7 +70,7 @@ export const WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/drugs-stock-app",
-    demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal"
+    demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
   },
 
   {
@@ -101,7 +101,7 @@ export const WORKS: Work[] = [
     img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/atte-api",
   },
-  
+
   {
     slug: "furima",
     title: "メルカリ風フリマアプリ",
@@ -152,7 +152,8 @@ export const WORKS: Work[] = [
       "予約ステータスの複雑な分岐処理",
     ],
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/store-rese"
+    github: "https://github.com/shoyama1010/store-rese",
+    demo: "http://52.68.242.6"
   },
 ];
 
