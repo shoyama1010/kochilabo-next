@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kochi.Labo | Webエンジニアポートフォリオ",
     description:
-      "要件定義から実装まで。課題解決できるWebエンジニアを目指す。",
+      "要件定義から実装まで課題解決できる、IT支援Webエンジニアを目指す。",
     type: "website",
   },
 };

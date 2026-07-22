@@ -213,6 +213,7 @@ export const OTHER_WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/fruit-furima-spa",
+    demo: "https://fruit-furima-frontend.vercel.app/login",
   },
 ];
 
