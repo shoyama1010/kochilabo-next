@@ -127,6 +127,7 @@ export const WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/tech-furima",
+    demo: "https://tech-furima-production.up.railway.app",
   },
 
   {
@@ -153,7 +154,7 @@ export const WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/store-rese",
-    demo: "http://52.68.242.6"
+    demo: "http://52.68.242.6",
   },
 ];
 
