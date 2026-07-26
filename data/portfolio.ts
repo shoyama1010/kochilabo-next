@@ -73,6 +73,137 @@ export const WORKS: Work[] = [
     demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
   },
 
+  // {
+  //   slug: "atte",
+  //   title: "勤怠打刻管理アプリ",
+  //   subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
+  //   tags: [
+  //     "Laravel 8",
+  //     "Nginx 1.21.1",
+  //     "PHP 8.0",
+  //     "MySQL 8.0.26",
+  //     "Sanctum",
+  //     "Next.js 14",
+  //     "React.js",
+  //     "TypeScript",
+  //   ],
+  //   desc: "一般従業員・管理者を想定し、勤怠打刻から修正申請・承認管理・スタッフ管理までをカバーするシステムです。フロントエンドはNext.jsでAPI連携し、高速なページ表示を実現しています。",
+  //   devised: [
+  //     "打刻の登録・確認がしやすい画面構成に調整",
+  //     "勤怠データを一覧で見やすく表示するように実装",
+  //     "基本操作を直感的に使えるよう画面設計を整理",
+  //   ],
+  //   struggled: [
+  //     "打刻処理をシンプルにしながら、一覧表示との整合性を保つ点",
+  //     "出勤・退勤の状態が分かりやすく伝わるよう、表示内容やボタンの切り替えを調整",
+  //     "基本機能を崩さずに見やすさを整えることを意識して実装",
+  //   ],
+  //   img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
+  //   github: "https://github.com/shoyama1010/atte-api",
+  // },
+
+  {
+    slug: "furima",
+    title: "メルカリ風フリマアプリ",
+    subtitle: "出品から購入までを一貫して実装したCtoCマーケットプレイス",
+    tags: [
+      "Laravel 8",
+      "Nginx 1.21.1",
+      "PHP 8.0",
+      "html/css",
+      "Tailwind css",
+      "MySQL 8.0.26",
+      "Sanctum",
+      "FormRequest",
+      "Storage",
+      "Vite",
+      "Node.js",
+      "React",
+      "TypeScript",
+      "React Router",
+    ],
+    desc: "出品から購入までの一連の機能を持つフリマアプリを開発。商品一覧・商品詳細・出品・購入フローを担当し、各機能が適切に連携するよう実装しました。",
+    devised: [
+      "商品一覧ページをSPAのように切り替わる構成に実装",
+      "いいね・コメント機能をリアルタイムに近い形で反映",
+      "画像アップロードはStorageを活用し、ファイル管理を整理",
+    ],
+    struggled: [
+      "購入完了後の在庫状態管理と表示切り替えの整合性",
+      "複数画像のアップロードとプレビュー表示の実装",
+    ],
+    img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
+    github: "https://github.com/shoyama1010/tech-furima",
+    demo: "https://tech-furima-production.up.railway.app",
+  },
+
+  {
+    slug: "store-rese",
+    title: "Rest予約店舗アプリ",
+    subtitle: "総合的な飲食店予約管理システム",
+    tags: [
+      "Laravel 8",
+      "nginx 1.21.1",
+      "PHP 8.0",
+      "html/css",
+      "MySQL 8.0.26",
+      "Fortify",
+      "JavaScript",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+    ],
+    desc: "Laravelを用いて、ユーザーが簡単に予約できる総合的な予約管理システムを開発しました。",
+    devised: [
+      "予約の登録・確認がしやすい画面構成に調整",
+      "モーダルや画面選択を使い、操作の流れをわかりやすく実装",
+      "入力バリデーションや認証まわりを整理し、基本機能を安定して使えるように実装",
+    ],
+    struggled: [
+      "モーダルと通常遷移の共存によるUI状態管理",
+      "予約ステータスの複雑な分岐処理",
+    ],
+    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
+    github: "https://github.com/shoyama1010/store-rese",
+    demo: "http://52.68.242.6",
+  },
+
+  {
+    slug: "fruit-furima",
+    title: "フルーツ販売アプリ",
+    subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
+    tags: [
+      "Laravel",
+      "Nginx 1.21.1",
+      "PHP8.0",
+      "CSS(Tailwind CSS)",
+      "MySQL 8.0.26",
+      "Api/Sanctum",
+      "storage",
+      "FormRequest",
+      "Railway",
+      "Node.js",
+      "Next.js",
+      "TypeScript",
+      "Vercel",
+    ],
+
+    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
+    devised: [
+      "商品一覧と検索機能を分かりやすく整理",
+      "商品登録機能を実装し、管理しやすい構成にしました",
+    ],
+    struggled: [
+      "商品情報の登録と一覧表示のつながりを整理する点に苦労しました",
+      "検索結果が分かりやすく表示されるよう調整しました",
+    ],
+    img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
+    github: "https://github.com/shoyama1010/fruit-furima-spa",
+    demo: "https://fruit-furima-frontend.vercel.app/login",
+  },
+];
+
+export const OTHER_WORKS: Work[] = [
   {
     slug: "atte",
     title: "勤怠打刻管理アプリ",
@@ -103,63 +234,6 @@ export const WORKS: Work[] = [
   },
 
   {
-    slug: "furima",
-    title: "メルカリ風フリマアプリ",
-    subtitle: "出品から購入までを一貫して実装したCtoCマーケットプレイス",
-    tags: [
-      "Laravel 8",
-      "Nginx 1.21.1",
-      "PHP 8.0",
-      "MySQL 8.0.26",
-      "Sanctum",
-      "FormRequest",
-      "Storage",
-    ],
-    desc: "出品から購入までの一連の機能を持つフリマアプリを開発。商品一覧・商品詳細・出品・購入フローを担当し、各機能が適切に連携するよう実装しました。",
-    devised: [
-      "商品一覧ページをSPAのように切り替わる構成に実装",
-      "いいね・コメント機能をリアルタイムに近い形で反映",
-      "画像アップロードはStorageを活用し、ファイル管理を整理",
-    ],
-    struggled: [
-      "購入完了後の在庫状態管理と表示切り替えの整合性",
-      "複数画像のアップロードとプレビュー表示の実装",
-    ],
-    img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/tech-furima",
-    demo: "https://tech-furima-production.up.railway.app",
-  },
-
-  {
-    slug: "store-rese",
-    title: "Rest予約店舗アプリ",
-    subtitle: "総合的な飲食店予約管理システム",
-    tags: [
-      "Laravel 8",
-      "nginx 1.21.1",
-      "PHP 8.0",
-      "MySQL 8.0.26",
-      "Fortify",
-      "JavaScript",
-    ],
-    desc: "Laravelを用いて、ユーザーが簡単に予約できる総合的な予約管理システムを開発しました。",
-    devised: [
-      "予約の登録・確認がしやすい画面構成に調整",
-      "モーダルや画面選択を使い、操作の流れをわかりやすく実装",
-      "入力バリデーションや認証まわりを整理し、基本機能を安定して使えるように実装",
-    ],
-    struggled: [
-      "モーダルと通常遷移の共存によるUI状態管理",
-      "予約ステータスの複雑な分岐処理",
-    ],
-    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/store-rese",
-    demo: "http://52.68.242.6",
-  },
-];
-
-export const OTHER_WORKS: Work[] = [
-  {
     slug: "BODY-control",
     title: "体重管理アプリ(BODYCON)",
     subtitle: "体重記録・分析用の管理アプリ",
@@ -188,34 +262,35 @@ export const OTHER_WORKS: Work[] = [
     demo: "https://weight-control-production.up.railway.app",
   },
 
-  {
-    slug: "fruit-furima",
-    title: "フルーツ販売アプリ",
-    subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
-    tags: [
-      "Laravel",
-      "Nginx 1.21.1",
-      "PHP8.0",
-      "CSS(Tailwind CSS)",
-      "MySQL 8.0.26",
-      "Api/Sanctum",
-      "storage",
-      "FormRequest",
-    ],
+  // {
+  //   slug: "fruit-furima",
+  //   title: "フルーツ販売アプリ",
+  //   subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
+  //   tags: [
+  //     "Laravel",
+  //     "Nginx 1.21.1",
+  //     "PHP8.0",
+  //     "CSS(Tailwind CSS)",
+  //     "MySQL 8.0.26",
+  //     "Api/Sanctum",
+  //     "storage",
+  //     "FormRequest",
+  //   ],
 
-    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
-    devised: [
-      "商品一覧と検索機能を分かりやすく整理",
-      "商品登録機能を実装し、管理しやすい構成にしました",
-    ],
-    struggled: [
-      "商品情報の登録と一覧表示のつながりを整理する点に苦労しました",
-      "検索結果が分かりやすく表示されるよう調整しました",
-    ],
-    img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/fruit-furima-spa",
-    demo: "https://fruit-furima-frontend.vercel.app/login",
-  },
+  //   desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
+  //   devised: [
+  //     "商品一覧と検索機能を分かりやすく整理",
+  //     "商品登録機能を実装し、管理しやすい構成にしました",
+  //   ],
+  //   struggled: [
+  //     "商品情報の登録と一覧表示のつながりを整理する点に苦労しました",
+  //     "検索結果が分かりやすく表示されるよう調整しました",
+  //   ],
+  //   img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
+  //   github: "https://github.com/shoyama1010/fruit-furima-spa",
+  //   demo: "https://fruit-furima-frontend.vercel.app/login",
+  // },
+
 ];
 
 export const TIMELINE = [
