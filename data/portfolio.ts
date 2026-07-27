@@ -73,35 +73,6 @@ export const WORKS: Work[] = [
     demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
   },
 
-  // {
-  //   slug: "atte",
-  //   title: "勤怠打刻管理アプリ",
-  //   subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
-  //   tags: [
-  //     "Laravel 8",
-  //     "Nginx 1.21.1",
-  //     "PHP 8.0",
-  //     "MySQL 8.0.26",
-  //     "Sanctum",
-  //     "Next.js 14",
-  //     "React.js",
-  //     "TypeScript",
-  //   ],
-  //   desc: "一般従業員・管理者を想定し、勤怠打刻から修正申請・承認管理・スタッフ管理までをカバーするシステムです。フロントエンドはNext.jsでAPI連携し、高速なページ表示を実現しています。",
-  //   devised: [
-  //     "打刻の登録・確認がしやすい画面構成に調整",
-  //     "勤怠データを一覧で見やすく表示するように実装",
-  //     "基本操作を直感的に使えるよう画面設計を整理",
-  //   ],
-  //   struggled: [
-  //     "打刻処理をシンプルにしながら、一覧表示との整合性を保つ点",
-  //     "出勤・退勤の状態が分かりやすく伝わるよう、表示内容やボタンの切り替えを調整",
-  //     "基本機能を崩さずに見やすさを整えることを意識して実装",
-  //   ],
-  //   img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
-  //   github: "https://github.com/shoyama1010/atte-api",
-  // },
-
   {
     slug: "furima",
     title: "メルカリ風フリマアプリ",
@@ -231,6 +202,7 @@ export const OTHER_WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/atte-api",
+    demo: "https://atte-api-production.up.railway.app/login",
   },
 
   {
@@ -261,36 +233,6 @@ export const OTHER_WORKS: Work[] = [
     github: "https://github.com/shoyama1010/weight-control",
     demo: "https://weight-control-production.up.railway.app",
   },
-
-  // {
-  //   slug: "fruit-furima",
-  //   title: "フルーツ販売アプリ",
-  //   subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
-  //   tags: [
-  //     "Laravel",
-  //     "Nginx 1.21.1",
-  //     "PHP8.0",
-  //     "CSS(Tailwind CSS)",
-  //     "MySQL 8.0.26",
-  //     "Api/Sanctum",
-  //     "storage",
-  //     "FormRequest",
-  //   ],
-
-  //   desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
-  //   devised: [
-  //     "商品一覧と検索機能を分かりやすく整理",
-  //     "商品登録機能を実装し、管理しやすい構成にしました",
-  //   ],
-  //   struggled: [
-  //     "商品情報の登録と一覧表示のつながりを整理する点に苦労しました",
-  //     "検索結果が分かりやすく表示されるよう調整しました",
-  //   ],
-  //   img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
-  //   github: "https://github.com/shoyama1010/fruit-furima-spa",
-  //   demo: "https://fruit-furima-frontend.vercel.app/login",
-  // },
-
 ];
 
 export const TIMELINE = [
@@ -310,7 +252,7 @@ export const TIMELINE = [
       "Windows 95の登場によりインターネットが一般家庭へ普及し始めた頃からWeb技術に興味を持つようになりました。HTML・JavaScript・Flashなどの登場によって、画面上で動くコンテンツを作れることに大きな魅力を感じました。当時は独学でプログラムやWeb技術に触れながら、ITへの関心を持ち続けていました。",
   },
   {
-    year: "1995〜2020年（製造DX世代）",
+    year: "1995〜2020年（製造DX時代）",
     label: "製造業（生産設備・品質管理・業務改善）",
     summary: "長年にわたり、生産設備や品質管理、業務改善などに携わって...",
     detail:
