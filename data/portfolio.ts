@@ -70,7 +70,8 @@ export const WORKS: Work[] = [
     ],
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/drugs-stock-app",
-    demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
+    // demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
+    demo: "https://drugstock-frontend-dh9jracrs-shoyama1010s-projects.vercel.app",
   },
 
   {
@@ -140,6 +141,38 @@ export const WORKS: Work[] = [
   },
 
   {
+    slug: "atte",
+    title: "勤怠打刻管理アプリ",
+    subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
+    tags: [
+      "Laravel 8",
+      "Nginx 1.21.1",
+      "PHP 8.0",
+      "MySQL 8.0.26",
+      "Sanctum",
+      "Next.js 14",
+      "React.js",
+      "TypeScript",
+    ],
+    desc: "一般従業員・管理者を想定し、勤怠打刻から修正申請・承認管理・スタッフ管理までをカバーするシステムです。フロントエンドはNext.jsでAPI連携し、高速なページ表示を実現しています。",
+    devised: [
+      "打刻の登録・確認がしやすい画面構成に調整",
+      "勤怠データを一覧で見やすく表示するように実装",
+      "基本操作を直感的に使えるよう画面設計を整理",
+    ],
+    struggled: [
+      "打刻処理をシンプルにしながら、一覧表示との整合性を保つ点",
+      "出勤・退勤の状態が分かりやすく伝わるよう、表示内容やボタンの切り替えを調整",
+      "基本機能を崩さずに見やすさを整えることを意識して実装",
+    ],
+    img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
+    github: "https://github.com/shoyama1010/atte-api",
+    demo: "https://atte-api-production.up.railway.app/attendance",
+  },
+];
+
+export const OTHER_WORKS: Work[] = [
+  {
     slug: "fruit-furima",
     title: "フルーツ販売アプリ",
     subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
@@ -172,39 +205,6 @@ export const WORKS: Work[] = [
     github: "https://github.com/shoyama1010/fruit-furima-spa",
     demo: "https://fruit-furima-frontend.vercel.app/login",
   },
-];
-
-export const OTHER_WORKS: Work[] = [
-  {
-    slug: "atte",
-    title: "勤怠打刻管理アプリ",
-    subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
-    tags: [
-      "Laravel 8",
-      "Nginx 1.21.1",
-      "PHP 8.0",
-      "MySQL 8.0.26",
-      "Sanctum",
-      "Next.js 14",
-      "React.js",
-      "TypeScript",
-    ],
-    desc: "一般従業員・管理者を想定し、勤怠打刻から修正申請・承認管理・スタッフ管理までをカバーするシステムです。フロントエンドはNext.jsでAPI連携し、高速なページ表示を実現しています。",
-    devised: [
-      "打刻の登録・確認がしやすい画面構成に調整",
-      "勤怠データを一覧で見やすく表示するように実装",
-      "基本操作を直感的に使えるよう画面設計を整理",
-    ],
-    struggled: [
-      "打刻処理をシンプルにしながら、一覧表示との整合性を保つ点",
-      "出勤・退勤の状態が分かりやすく伝わるよう、表示内容やボタンの切り替えを調整",
-      "基本機能を崩さずに見やすさを整えることを意識して実装",
-    ],
-    img: "https://images.unsplash.com/photo-1594995846645-d58328c3ffa4?w=900&h=500&fit=crop&auto=format",
-    github: "https://github.com/shoyama1010/atte-api",
-    demo: "https://atte-api-production.up.railway.app/login",
-  },
-
   {
     slug: "BODY-control",
     title: "体重管理アプリ(BODYCON)",
