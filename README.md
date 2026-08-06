@@ -6,6 +6,7 @@
 - Ｎext.js
 - Tailwind CSS(SSG仕様)
 - typescript
+- Vercel
 
 # ローカルURL
 http://localhost:3000/
