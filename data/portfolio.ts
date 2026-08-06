@@ -141,8 +141,8 @@ export const WORKS: Work[] = [
   },
 
   {
-    slug: "atte",
-    title: "勤怠打刻管理アプリ",
+    slug: "workflow",
+    title: "WorkFlow - 勤怠管理アプリ",
     subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
     tags: [
       "Laravel 8",

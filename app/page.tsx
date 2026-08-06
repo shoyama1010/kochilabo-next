@@ -29,14 +29,23 @@ export default function Home() {
             <span className="inline-block w-6 h-px bg-primary" />
             Web Engineer Portfolio
           </p>
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] mb-6 tracking-tight">
-            要件定義から<br />実装まで。
-            <span className="block text-primary mt-2">課題解決できる</span>
-            <span className="block">Webエンジニア。</span>
+          {/* <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] mb-6 tracking-tight"> */}
+            {/* 要件定義から<br />実装まで。 */}
+          <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] tracking-tight">
+            現場の要件課題を
+            <span className="block text-primary mt-2">
+              {/* 課題解決できる */}
+              技術で解決できる
+              </span>
+            <span className="block">Webエンジニアへ。</span>
           </h1>
           <p className="text-muted-foreground max-w-lg text-sm leading-relaxed mb-10">
-            PHP / Laravel・React / Next.js を軸に、バックエンドからフロントエンドまで
-            一貫して開発できるエンジニアです。製造業での「改善思考」を武器に課題解決に挑みます。
+            {/* PHP / Laravel・React / Next.js を軸に、バックエンドからフロントエンドまで
+            一貫して開発できるエンジニアです。製造業での「改善思考」を武器に課題解決に挑みます。 */}
+            PHP / Laravel / React / Next.jsを中心に、
+            バックエンドからフロントエンドまで一貫した開発に取り組んでいます。
+            製造業で培った改善思考を活かし、現場やユーザーの課題を整理しながら、
+            使いやすいWebアプリケーションの実装を目指しています。
           </p>
           <div className="flex gap-4 flex-wrap">
             <Link
