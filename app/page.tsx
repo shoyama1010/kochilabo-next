@@ -19,54 +19,151 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative min-h-[92vh] flex flex-col justify-center px-6">
+      {/* <section className="relative min-h-[92vh] flex flex-col justify-center px-6"> */}
+      <section className="relative min-h-[92vh] flex items-center justify-center px-6 overflow-hidden">
+        {/* background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
           <div className="absolute top-1/4 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]" />
           <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-primary/3 rounded-full blur-[80px]" />
         </div>
-        <div className="max-w-5xl mx-auto w-full relative">
-          <p className="text-xs font-mono text-primary mb-5 tracking-[0.2em] flex items-center gap-2">
-            <span className="inline-block w-6 h-px bg-primary" />
-            Web Engineer Portfolio
-          </p>
-          {/* <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] mb-6 tracking-tight"> */}
+
+        <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-[1.25fr_0.75fr] gap-12 items-center">
+        {/* <div className="max-w-5xl mx-auto w-full relative"> */}
+
+          {/* 左側 */}
+          <div>
+            <p className="text-xs font-mono text-primary mb-5 tracking-[0.2em] flex items-center gap-2">
+              <span className="inline-block w-6 h-px bg-primary" />
+              Web Engineer Portfolio
+            </p>
+            {/* <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] mb-6 tracking-tight"> */}
             {/* 要件定義から<br />実装まで。 */}
-          <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] tracking-tight">
-            現場の要件課題を
-            <span className="block text-primary mt-2">
-              {/* 課題解決できる */}
-              技術で解決できる
+            <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] tracking-tight">
+              現場の要件課題を
+              <span className="block text-primary mt-2">
+                {/* 課題解決できる */}
+                技術で解決できる
               </span>
-            <span className="block">Webエンジニアへ。</span>
-          </h1>
-          <p className="text-muted-foreground max-w-lg text-sm leading-relaxed mb-10">
-            {/* PHP / Laravel・React / Next.js を軸に、バックエンドからフロントエンドまで
+              <span className="block">Webエンジニアへ</span>
+            </h1>
+            <p className="text-muted-foreground max-w-lg text-sm leading-relaxed mb-10">
+              {/* PHP / Laravel・React / Next.js を軸に、バックエンドからフロントエンドまで
             一貫して開発できるエンジニアです。製造業での「改善思考」を武器に課題解決に挑みます。 */}
-            PHP / Laravel / React / Next.jsを中心に、
-            バックエンドからフロントエンドまで一貫した開発に取り組んでいます。
-            製造業で培った改善思考を活かし、現場やユーザーの課題を整理しながら、
-            使いやすいWebアプリケーションの実装を目指しています。
-          </p>
-          <div className="flex gap-4 flex-wrap">
-            <Link
-              href="/works"
-              className="bg-primary text-primary-foreground px-7 py-3 text-sm font-medium rounded hover:opacity-90 transition-opacity flex items-center gap-2"
-            >
-              作品を見る <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="/about"
-              className="border border-border text-foreground px-7 py-3 text-sm rounded hover:border-primary hover:text-primary transition-colors"
-            >
-              自己紹介を見る
-            </Link>
+              PHP / Laravel / React / Next.jsを中心に、
+              バックエンドからフロントエンドまで一貫した開発に取り組んでいます。
+              製造業で培った改善思考を活かし、現場やユーザーの課題を整理しながら、
+              使いやすいWebアプリケーションの実装を目指しています。
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                href="/works"
+                className="bg-primary text-primary-foreground px-7 py-3 text-sm font-medium rounded hover:opacity-90 transition-opacity flex items-center gap-2"
+              >
+                作品を見る <ArrowRight size={16} />
+              </Link>
+              <Link
+                href="/about"
+                className="border border-border text-foreground px-7 py-3 text-sm rounded hover:border-primary hover:text-primary transition-colors"
+              >
+                自己紹介を見る
+              </Link>
+            </div>
+          </div>
+
+          {/* 右側：Terminal */}
+          <div className="hidden lg:block">
+            <div className="rounded-xl border border-border bg-card overflow-hidden shadow-2xl shadow-black/40">
+
+              {/* Terminal header */}
+              <div className="flex items-center gap-2 px-4 py-3 bg-secondary border-b border-border">
+                <span className="w-3 h-3 rounded-full bg-red-500/80" />
+                <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
+                <span className="w-3 h-3 rounded-full bg-green-500/80" />
+
+                <span className="ml-3 text-xs font-mono text-muted-foreground">
+                  ~/kochi-labo
+                </span>
+              </div>
+
+              {/* Terminal body */}
+              <div className="p-5 text-xs font-mono leading-7 select-none">
+
+                <p className="text-primary mb-3">
+                  {"// Kochi.Labo"}
+                </p>
+
+                <p>
+                  <span className="text-blue-400">const</span>{" "}
+                  <span className="text-primary">profile</span>{" "}
+                  <span className="text-muted-foreground">= {"{"}</span>
+                </p>
+
+                <p className="pl-4">
+                  <span className="text-primary">role</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-green-400">&quot;Web Engineer&quot;</span>,
+                </p>
+
+                <p className="pl-4">
+                  <span className="text-primary">skills</span>
+                  <span className="text-muted-foreground">: [</span>
+                </p>
+
+                <p className="pl-8 text-green-400">
+                  &quot;Laravel&quot;, &quot;PHP&quot;,
+                </p>
+
+                <p className="pl-8 text-green-400">
+                  &quot;React&quot;, &quot;Next.js&quot;,
+                </p>
+
+                <p className="pl-8 text-green-400">
+                  &quot;TypeScript&quot;, &quot;Docker&quot;,
+                </p>
+
+                <p className="pl-8 text-green-400">
+                  &quot;MySQL&quot;, &quot;AWS&quot;
+                </p>
+
+                <p className="pl-4 text-muted-foreground">],</p>
+
+                <p className="pl-4">
+                  <span className="text-primary">strength</span>
+                  <span className="text-muted-foreground">: </span>
+                  <span className="text-green-400">
+                    &quot;課題解決思考&quot;
+                  </span>,
+                </p>
+
+                <p className="text-muted-foreground">{"};"}</p>
+
+                <div className="mt-5 pt-4 border-t border-border">
+                  <p>
+                    <span className="text-primary">›</span>{" "}
+                    <span className="text-green-400">
+                      Ready for production
+                    </span>
+                  </p>
+
+                  <p className="mt-2 flex items-center">
+                    <span className="text-muted-foreground">$</span>
+                    <span className="inline-block w-2 h-4 bg-primary/80 ml-2 animate-pulse" />
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+
+
+        {/* scroll */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-muted-foreground/40">
           <div className="w-px h-8 bg-gradient-to-b from-transparent to-muted-foreground/30" />
           <span className="text-[10px] font-mono tracking-widest">SCROLL</span>
         </div>
       </section>
+
 
       {/* ── Skills summary ── */}
       <section className="border-t border-border py-16 px-6">
