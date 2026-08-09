@@ -51,7 +51,7 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 
 <img width="1140" height="630" alt="スクリーンショット (6397)" src="https://github.com/user-attachments/assets/3eedbded-dac1-4e12-af5c-e0b6f8035a8c" />
 
-ポートフォリオ閲覧者から問い合わせができるページを用意しています。
+ポートフォリオ閲覧者から問い合わせができるページを用意しています。（現在、お問い合わせフォームのUIを実装して、準備次第可能となります）
 
 ---
 
