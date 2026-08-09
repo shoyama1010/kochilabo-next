@@ -35,7 +35,7 @@ git push -u origin main
 ## 本番環境URL
 https://kochilabo-next.vercel.app
 
-＊コード修正あれば。。
+＊更新対応
 
 npm run build
 
