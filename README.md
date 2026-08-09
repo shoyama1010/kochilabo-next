@@ -19,10 +19,9 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 
 # 画面構成
 
-（スキル内容）
-<img width="1225" height="584" alt="スクリーンショット (5705)" src="https://github.com/user-attachments/assets/2d4d09f7-6256-4d00-b203-e47e0bf5369b" />
-
 ### ホーム
+
+<img width="1366" height="628" alt="スクリーンショット (6393)" src="https://github.com/user-attachments/assets/a188ae3f-2b15-4386-a3a1-7ff8cb08f9f4" />
 
 ポートフォリオサイトのトップページです。
 
@@ -30,19 +29,27 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 
 ### 自己紹介
 
+<img width="1344" height="634" alt="スクリーンショット (6394)" src="https://github.com/user-attachments/assets/3b566c9e-c84a-4300-b7cc-17c8a19b3127" />
+
 これまでの経歴や、Web開発を学ぶまでの経験について掲載しています。
 
 ### スキル内容
 
+<img width="1364" height="627" alt="スクリーンショット (6395)" src="https://github.com/user-attachments/assets/93a24ae0-d13c-43d5-af53-f3dab43da055" />
+
 これまで使用してきたバックエンド・フロントエンド・インフラ関連の技術を掲載しています。
 
 ### 作品紹介
+
+<img width="1266" height="629" alt="スクリーンショット (6396)" src="https://github.com/user-attachments/assets/a00a5bb2-7f21-41c1-8582-3cf955c578fd" />
 
 これまで制作したWebアプリケーションを一覧で掲載しています。
 
 各作品から詳細ページへ遷移し、使用技術・実装機能・工夫した点などを確認できる構成にしています。
 
 ### お問い合わせ
+
+<img width="1140" height="630" alt="スクリーンショット (6397)" src="https://github.com/user-attachments/assets/3eedbded-dac1-4e12-af5c-e0b6f8035a8c" />
 
 ポートフォリオ閲覧者から問い合わせができるページを用意しています。
 
