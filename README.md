@@ -31,25 +31,51 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 # 使用技術
 - Ｎext.js
 - Tailwind CSS(SSG仕様)
-- typescript
+- TypeScript
 - Vercel
 
-# ローカルURL
-http://localhost:3000/
+## 主な機能・特徴
 
-# 環境構築
-## GitHubでリポジトリ作成
-- New repository
-- kochilabo-next
-- cd ~/coachtech/kochilabo-next
-- git init
-- .gitignoreの確認
+- 自己紹介・経歴の掲載
+- 技術スキルの一覧表示
+- 制作したWebアプリケーションの一覧表示
+- 制作物ごとの詳細ページ
+- 使用技術・実装内容・工夫した点の掲載
+- お問い合わせページ
+- レスポンシブデザイン
+- Next.js App Routerを利用したページ構成
 
-## リモートリポジトリを登録
+## 環境構築
 
-git remote add origin git@github.com:shoyama1010/kochilabo-next.git
+### リポジトリをクローン
 
-git push -u origin main
+```bash
+git clone git@github.com:shoyama1010/kochilabo-next.git
+```
+
+### プロジェクトへ移動
+
+```bash
+cd kochilabo-next
+```
+
+### パッケージをインストール
+
+```bash
+npm install
+```
+
+### 開発サーバーを起動
+
+```bash
+npm run dev
+```
+
+起動後、ブラウザから以下へアクセスします。
+
+```text
+http://localhost:3000
+```
 
 ## VercelとGitHubを連携
 - Vercelにログイン
@@ -58,16 +84,16 @@ git push -u origin main
 - Framework Preset が Next.js になっているか確認
 - Deploy をクリック（初回）
 
-## 本番環境URL
+## 本番環境
+
+Vercelを使用して公開しています。
+
+### ポートフォリオサイト
+
 https://kochilabo-next.vercel.app
 
-＊更新対応
+GitHubでは、本ポートフォリオサイトおよびこれまでに制作したWebアプリケーションのソースコードを公開しています。
 
-npm run build
-
-GitHubへPush
-
-Vercelが自動で再デプロイ
 
 ## 工夫した点
 
@@ -82,3 +108,4 @@ Vercelが自動で再デプロイ
 - 制作物や習得技術の追加
 - 各制作物の説明・技術的な工夫点の充実
 - UI・レスポンシブ表示の継続的な改善
+- パフォーマンスやSEOを意識した改善
