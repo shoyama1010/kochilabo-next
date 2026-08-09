@@ -48,7 +48,7 @@ export default function Home() {
               PHP / Laravel / React / Next.jsを中心に、
               バックエンドからフロントエンドまで一貫した開発に取り組んでいます。
               製造業で培った改善思考を活かし、現場やユーザーの課題を整理しながら、
-              使いやすいWebアプリケーションの実装を目指しています。
+              使いやすいWebアプリケーションの実装に取り組んでいます。
             </p>
             <div className="flex gap-4 flex-wrap">
               <Link
