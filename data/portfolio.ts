@@ -265,6 +265,6 @@ export const TIMELINE = [
     summary:
       "スマホの普及とAIの到来により、WEBエンジニアへの道の為に...ハローワークのIT実践訓練校を通じて....",
     detail:
-      "ハローワークのIT実践訓練校を通じて「4か月体験実践」としてWeb開発を学び始めました。AIの時代に入ったことでさらに深めたいと、次のWebエンジニア実践スクールでは模擬案件にも参加。Laravel / PHP / MySQL / Docker / Git・GitHub / React / Next.js / TypeScript などを用いて複数のWebアプリケーションを開発。テストコード作成やAWSを利用した公開作業にも取り組み、実務を意識した開発経験を積み重ねています。",
+      "製造業を退職し、ハローワークのIT実践訓練校を通じてWeb開発を学び始めました。AIの時代に入ったことで確実に案件を獲得したいと、次のWebエンジニア実践スクールで模擬案件にも参加。Laravel / PHP / MySQL / Docker / Git・GitHub / React / Next.js / TypeScript などを用いて複数のWebアプリケーションを開発。テストコード作成やAWSを利用した公開作業にも取り組み、実務を意識した開発経験を積み重ねています。",
   },
 ];
