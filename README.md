@@ -1,3 +1,9 @@
+# kochi-labo
+
+# サイト概要
+
+# 作成した目的
+
 # 画面構成
 
 <img width="1225" height="584" alt="スクリーンショット (5705)" src="https://github.com/user-attachments/assets/2d4d09f7-6256-4d00-b203-e47e0bf5369b" />
