@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      {/* <section className="relative min-h-[92vh] flex flex-col justify-center px-6"> */}
+      
       <section className="relative min-h-[92vh] flex items-center justify-center px-6 overflow-hidden">
         {/* background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -28,16 +28,13 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 w-full max-w-6xl mx-auto grid lg:grid-cols-[1.25fr_0.75fr] gap-12 items-center">
-        {/* <div className="max-w-5xl mx-auto w-full relative"> */}
-
           {/* 左側 */}
           <div>
             <p className="text-xs font-mono text-primary mb-5 tracking-[0.2em] flex items-center gap-2">
               <span className="inline-block w-6 h-px bg-primary" />
               Web Engineer Portfolio
             </p>
-            {/* <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] mb-6 tracking-tight"> */}
-            {/* 要件定義から<br />実装まで。 */}
+
             <h1 className="text-5xl md:text-7xl font-bold leading-[1.15] tracking-tight">
               現場の要件課題を
               <span className="block text-primary mt-2">
@@ -47,8 +44,7 @@ export default function Home() {
               <span className="block">Webエンジニアへ</span>
             </h1>
             <p className="text-muted-foreground max-w-lg text-sm leading-relaxed mb-10">
-              {/* PHP / Laravel・React / Next.js を軸に、バックエンドからフロントエンドまで
-            一貫して開発できるエンジニアです。製造業での「改善思考」を武器に課題解決に挑みます。 */}
+             
               PHP / Laravel / React / Next.jsを中心に、
               バックエンドからフロントエンドまで一貫した開発に取り組んでいます。
               製造業で培った改善思考を活かし、現場やユーザーの課題を整理しながら、
