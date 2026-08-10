@@ -5,7 +5,6 @@ import { Mail } from "lucide-react";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done">("idle");
-
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setStatus("sending");
@@ -26,35 +25,49 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
-      <input
-        name="name"
-        required
-        className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-        placeholder="お名前"
-      />
-      <input
-        name="email"
-        type="email"
-        required
-        className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
-        placeholder="メールアドレス"
-      />
-      <textarea
-        name="message"
-        rows={5}
-        required
-        className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
-        placeholder="メッセージ"
-      />
-      <button
+    <div className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-3">
+        <input
+          name="name"
+          required
+          className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          placeholder="お名前"
+        />
+        <input
+          name="email"
+          type="email"
+          required
+          className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors"
+          placeholder="メールアドレス"
+        />
+        <textarea
+          name="message"
+          rows={5}
+          required
+          className="w-full bg-secondary border border-border rounded-lg px-4 py-3 text-sm placeholder:text-muted-foreground focus:outline-none focus:border-primary transition-colors resize-none"
+          placeholder="メッセージ"
+        />
+        <button
+          type="button"
+          disabled
+          className="w-full bg-primary/50 text-primary-foreground py-3 text-sm font-medium rounded-lg flex items-center justify-center gap-2 cursor-not-allowed"
+        >
+          <Mail size={16} />
+          お問い合わせ機能は準備中です
+        </button>
+        {/* <button
         type="submit"
         disabled={status === "sending"}
         className="w-full bg-primary text-primary-foreground py-3 text-sm font-medium rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-60"
-      >
+    >
         <Mail size={16} />
         {status === "sending" ? "送信中..." : "送信する"}
-      </button>
-    </form>
+      </button> */}
+      </form>
+      <p className="text-xs text-muted-foreground leading-relaxed text-center">
+        現在、お問い合わせフォームはUIデモとして表示しています。
+        メール送信機能は今後実装予定です。
+      </p>
+    </div>
   );
 }
