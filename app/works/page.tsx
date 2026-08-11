@@ -1,3 +1,4 @@
+
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -14,10 +15,27 @@ export const metadata: Metadata = {
 export default function Works() {
   return (
     <section className="pt-8 pb-24 px-6 max-w-5xl mx-auto">
-      <Breadcrumb items={[{ label: "/", href: "/" }, { label: "作品紹介" }]} />
+      <Breadcrumb
+        items={[
+          { label: "/", href: "/" },
+          { label: "作品紹介" },
+        ]}
+      />
 
       <h1 className="text-4xl font-bold mb-2">作品紹介</h1>
-      <div className="h-0.5 w-12 bg-primary mb-10 mt-4" />
+      <div className="h-0.5 w-12 bg-primary mb-6 mt-4" />
+
+      {/* メイン作品の説明 */}
+      <div className="mb-10">
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          <span className="text-foreground font-medium">
+            実用的な機能を持つメイン作品：
+          </span>
+          Laravelを中心に、認証・CRUD・検索・管理機能などを実装した
+          Webアプリケーションです。React / Next.jsとLaravel APIを連携した
+          SPA開発にも取り組んでいます。
+        </p>
+      </div>
 
       {/* メイン作品 */}
       <div className="space-y-6 mb-12">
@@ -36,18 +54,28 @@ export default function Works() {
                   className="object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                 />
               </div>
+
               <div className="md:col-span-3 p-7 flex flex-col justify-between">
                 <div>
                   <div className="flex flex-wrap gap-1.5 mb-3">
-                    {w.tags.slice(0, 4).map((t) => (
+                    {w.tags.slice(0, 6).map((t) => (
                       <Tag key={t} text={t} />
                     ))}
                   </div>
-                  <h2 className="font-bold text-xl mb-1">{w.title}</h2>
-                  <p className="text-xs text-muted-foreground mb-3">{w.subtitle}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{w.desc}</p>
+
+                  <h2 className="font-bold text-xl mb-1">
+                    {w.title}
+                  </h2>
+
+                  <p className="text-xs text-muted-foreground mb-3">
+                    {w.subtitle}
+                  </p>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    {w.desc}
+                  </p>
                 </div>
-                
+
                 <p className="flex items-center gap-1.5 text-xs font-mono text-primary mt-5 group-hover:gap-2.5 transition-all">
                   詳細ページへ <ArrowRight size={12} />
                 </p>
@@ -60,13 +88,30 @@ export default function Works() {
       {/* その他の制作物 */}
       <div className="border border-border rounded-xl bg-card overflow-hidden">
         <div className="px-7 py-5 border-b border-border">
-          <p className="text-xs font-mono text-primary mb-1">{"// Other"}</p>
-          <h2 className="font-bold text-base">その他の制作物</h2>
+          <p className="text-xs font-mono text-primary mb-1">
+            {"// Other"}
+          </p>
+
+          <h2 className="font-bold text-base mb-3">
+            その他の制作物
+          </h2>
+
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            <span className="text-foreground font-medium">
+              学習・技術検証を目的とした作品：
+            </span>
+            Laravelの基本機能に加え、API連携やフロントエンド分離など、
+            メイン作品とは異なる技術構成にも取り組んでいます。
+          </p>
         </div>
+
         {OTHER_WORKS.map((w, i) => (
           <div
             key={w.title}
-            className={`px-7 py-5 ${i < OTHER_WORKS.length - 1 ? "border-b border-border" : ""}`}
+            className={`px-7 py-5 ${i < OTHER_WORKS.length - 1
+                ? "border-b border-border"
+                : ""
+              }`}
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
@@ -75,16 +120,24 @@ export default function Works() {
                     <Tag key={t} text={t} />
                   ))}
                 </div>
-                <h3 className="font-semibold text-sm mb-1">{w.title}</h3>
-                <p className="text-xs text-muted-foreground">{w.desc}</p>
+
+                <h3 className="font-semibold text-sm mb-1">
+                  {w.title}
+                </h3>
+
+                <p className="text-xs text-muted-foreground">
+                  {w.desc}
+                </p>
               </div>
+
               <a
                 href={w.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs font-mono text-primary flex items-center gap-1.5 shrink-0 hover:opacity-70 transition-opacity"
               >
-                <Github size={13} /> GitHub
+                <Github size={13} />
+                GitHub
               </a>
 
               {w.demo && (
