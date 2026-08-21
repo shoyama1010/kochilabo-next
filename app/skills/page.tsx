@@ -23,6 +23,17 @@ export default function Skills() {
       <h1 className="text-4xl font-bold mb-2">スキル内容</h1>
       <div className="h-0.5 w-12 bg-primary mb-10 mt-4" />
 
+      {/* スキル概要 */}
+      <div className="mb-10 max-w-4xl">
+        <p className="text-sm text-muted-foreground leading-relaxed">
+          今後は新しいLaravelバージョンも取り入れながら、
+          API設計・テスト・フロントエンド分離を含め、
+          より実務を意識した開発力の向上に取り組んでいます。
+        </p>
+      </div>
+
+
+      {/* スキルカード*/}
       <div className="grid md:grid-cols-3 gap-6">
         {SKILLS.map((s) => (
           <div
