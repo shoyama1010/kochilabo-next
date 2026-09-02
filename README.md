@@ -49,11 +49,11 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 
 ### お問い合わせ
 
-<img width="1140" height="630" alt="スクリーンショット (6397)" src="https://github.com/user-attachments/assets/3eedbded-dac1-4e12-af5c-e0b6f8035a8c" />
 
-ポートフォリオ閲覧者から問い合わせができるページを用意しています。（現在、お問い合わせフォームのUIを実装して、準備次第可能となります）
 
----
+ポートフォリオ閲覧者から問い合わせができるページを用意しています。
+
+<img width="992" height="627" alt="スクリーンショット (6800)" src="https://github.com/user-attachments/assets/28933b74-4e4f-461b-bac0-55a79e786e95" />
 
 # 使用技術
 - Ｎext.js
