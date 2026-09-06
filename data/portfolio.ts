@@ -11,8 +11,17 @@ export const SKILLS = [
     icon: "code",
     title: "フロントエンド技術",
     sub: "React / Next.js",
-    desc: "HTML / CSS / JavaScript を用いたレスポンシブ対応サイト制作。ReactによるSPA開発やコンポーネント設計について、学習及び実務に近い個人開発をしています。",
-    tags: ["HTML", "CSS", "JavaScript", "Node.js", "React", "Next.js", "Vite", "MUI"],
+    desc: "JavaScript / React / Next.js を用いたレスポンシブ対応サイト制作。ReactによるSPA開発やコンポーネント設計について、学習及び実務に近い個人開発をしています。",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Node.js",
+      "React",
+      "Next.js",
+      "Vite",
+      "MUI",
+    ],
   },
 
   {
@@ -20,7 +29,17 @@ export const SKILLS = [
     title: "インフラ技術",
     sub: "Docker / AWS",
     desc: "Git/GitHub・Docker・VSCode・Linux/Ubuntuを利用した環境構築。",
-    tags: ["Git", "GitHub", "Docker", "AWS", "Vercel", "Linux", "Nginx", "VSCode", "Railway"],
+    tags: [
+      "Git",
+      "GitHub",
+      "Docker",
+      "AWS",
+      "Vercel",
+      "Linux",
+      "Nginx",
+      "VSCode",
+      "Railway",
+    ],
   },
 ];
 
@@ -30,9 +49,14 @@ export type Work = {
   subtitle: string;
   tags: string[];
   desc: string;
+
+  assumedIssue?: string[]; 
+  approach?: string[];
+
   purpose?: string;
   devised: string[];
   struggled: string[];
+
   img: string;
   github?: string;
   demo?: string;
@@ -60,20 +84,40 @@ export const WORKS: Work[] = [
       "Railway",
       "Vercel",
     ],
-    desc: "医薬品卸倉庫向けの在庫管理システムで、入庫・出庫・在庫・履歴管理を簡素化し、現場の効率を大幅に向上させます。",
+
+    desc: "医薬品卸倉庫向けの在庫管理システムです。入庫・出庫・在庫・履歴・スタッフ管理を一元化し、Laravel REST APIとReact SPAを分離した構成で開発しました。",
+
+    assumedIssue: [
+      "医薬品卸倉庫では、商品ごとの在庫数だけでなく、ロット番号・使用期限・保管場所・棚ごとの数量まで正確に管理する必要がある",
+      "商品の大きさや入庫数量によっては、同一商品・同一ロットを1つの棚に収めきれず、複数棚へ分散して保管する必要がある",
+      "棚ごとの数量を正確に把握できないと、出庫時の数量間違いや在庫差異につながる",
+      "管理者と現場スタッフでは必要な操作範囲が異なるため、役割に応じた権限制御が必要になる",
+    ],
+
+    approach: [
+      "商品・ロット・棚を分離し、stock_lots・locations・stock_lot_locationsで在庫を管理",
+      "1つのロットを複数棚へ関連付け、同一ロットを分割して保管できる構成を実装",
+      "入庫時は棚の空き状況と容量を確認し、収まらない数量を他の空棚へ自動分割",
+      "出庫時は在庫不足を確認し、入庫日の古いロットから順に在庫を減算",
+      "入出庫履歴をtransactionsへ記録し、Sanctumで保護したLaravel APIとReact SPAを連携",
+    ],
+
     devised: [
-      "ロット単位の在庫管理を実装",
-      "ロットを複数棚に分割できる構成に対応",
-      "棚ごとの在庫数を保持する仕組みを実装",
-      "ロール別認証ガード、ダッシュボード連携、エラー表示を調整",
+      "ロットと棚を組み合わせて在庫数量を管理し、複数棚への分割保管に対応",
+      "棚ごとのcapacityを利用し、入庫数量を複数棚へ自動分割",
+      "入出庫処理をDBトランザクションで実行し、在庫更新と履歴保存の整合性を確保",
+      "管理者とスタッフの操作範囲を分け、ロールに応じた画面・機能を制御",
+      // "本番環境ではMailHogが利用できないため、スタッフ登録後の社員番号・仮PINをモーダル表示する方式へ変更",
     ],
+
     struggled: [
-      "ロット管理と複数棚への分割ロジックの設計",
-      "在庫数の整合性を保つトランザクション処理",
+      "同一ロットを複数棚へ分割するため、商品・ロット・棚の関係を整理してDB設計した",
+      "在庫更新と履歴保存がずれないよう、入出庫処理をDBトランザクションで一体化した",
+      "ReactとLaravel API間の認証・バリデーションエラーを、HTTPステータスとNetworkタブで切り分けて解決した",
     ],
+
     img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&h=500&fit=crop&auto=format",
     github: "https://github.com/shoyama1010/drugs-stock-app",
-    // demo: "https://www.dropbox.com/preview/2026-07-11%2018-39-31.mp4?role=personal",
     demo: "https://drugstock-frontend-9pp2.vercel.app",
   },
 
