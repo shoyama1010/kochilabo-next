@@ -65,8 +65,8 @@ export type Work = {
 export const WORKS: Work[] = [
   {
     slug: "zaiko",
-    title: "ドラッグストア向けアプリ",
-    subtitle: "医薬品卸倉庫向け在庫管理システム",
+    title: "DrugStore - 在庫管理アプリ",
+    subtitle: "医薬品及び日用品在庫管理システム",
     tags: [
       "Laravel 10",
       "PHP 8.0",
@@ -85,7 +85,7 @@ export const WORKS: Work[] = [
       "Vercel",
     ],
 
-    desc: "医薬品卸倉庫向けの在庫管理システムです。入庫・出庫・在庫・履歴・スタッフ管理を一元化し、Laravel REST APIとReact SPAを分離した構成で開発しました。",
+    desc: "医薬品及び日用品向けの倉庫在庫管理システムです。入庫・出庫・在庫・履歴・スタッフ管理を一元化し、Laravel REST APIとReact SPAを分離した構成で開発しました。",
 
     assumedIssue: [
       "医薬品卸倉庫では、商品ごとの在庫数だけでなく、ロット番号・使用期限・保管場所・棚ごとの数量まで正確に管理する必要がある",
