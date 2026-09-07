@@ -67,7 +67,7 @@ export default async function WorkDetail({
           <div className="mt-8">
             <h2 className="text-2xl font-bold mb-4">目的</h2>
 
-            <p className="text-sm text-muted-foreground leading-loose">
+            <p className="text-sm text-muted-foreground leading-loose whitespace-pre-line">
               {work.purpose ?? work.desc}
             </p>
           </div>
