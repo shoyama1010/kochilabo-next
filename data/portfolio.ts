@@ -179,37 +179,63 @@ export const WORKS: Work[] = [
   {
     slug: "furima",
     title: "メルカリ風フリマアプリ",
-    subtitle: "出品から購入までを一貫して実装したCtoCマーケットプレイス",
+    subtitle: "出品・購入・いいね・コメントを備えたCtoCマーケットプレイス",
     tags: [
       "Laravel 8",
-      "Nginx 1.21.1",
-      "PHP 8.0",
-      "html/css",
-      "Tailwind css",
+      "PHP 8.2",
       "MySQL 8.0.26",
       "Sanctum",
-      "FormRequest",
-      "Storage",
-      "Vite",
-      "Node.js",
-      "React（一部画面）",
+      "REST API",
+      "React",
+      "SPA",
       "TypeScript",
       "React Router",
-      "REST API",
+      "Vite",
+      "Tailwind CSS",
+      "FormRequest",
+      "Storage",
+      "Nginx 1.21.1",
       "Railway",
+      "Vercel",
     ],
-    desc: "出品から購入までの一連の機能を持つフリマアプリを開発。商品一覧・商品詳細・出品・購入フローを担当し、各機能が適切に連携するよう実装しました。",
+
+    desc: "Laravel Bladeで構築した既存のフリマアプリをベースに、React（TypeScript）から利用するREST APIを追加し、主要画面から「段階的」にSPA化しました。\n商品一覧・商品詳細・出品・購入・検索・いいね・コメント・マイページなど、CtoCサービスの基本機能を実装しています。",
+
+    assumedIssue: [
+      "出品・購入・いいね・コメントなど、ユーザーごとの操作を安全に管理する必要がある",
+      "商品詳細では出品者・カテゴリ・コメント・いいね数など、複数の関連データを効率よく取得する必要がある",
+      "既存のLaravel Blade機能を維持しながら、フロントエンドを「段階的」にSPA化する必要がある",
+      "フロントエンドとバックエンドを分離した状態でも、ログイン状態を維持してAPIを利用できる仕組みが必要",
+    ],
+
+    approach: [
+      "LaravelをAPIサーバーとして利用し、React・TypeScriptからREST APIを呼び出す構成を追加",
+      "Sanctumでアクセストークンを発行し、Bearer TokenによるAPI認証を実装",
+      "商品詳細ではEager LoadingとwithCountを利用し、関連データをまとめて取得",
+      "いいね済みかを判定し、同一APIで登録・解除できるトグル処理を実装",
+      "Storageに保存した画像をAPIレスポンス向けURLとして返す構成に整理",
+      "Laravel Bladeの既存機能を残しつつ、主要画面から「段階的」にSPA化",
+    ],
+
     devised: [
-      "商品一覧ページをSPAのように切り替わる構成に実装",
-      "いいね・コメント機能をリアルタイムに近い形で反映",
-      "画像アップロードはStorageを活用し、ファイル管理を整理",
+      "既存Blade機能を維持しながら、React向けAPIを追加して段階的にSPA化",
+      "SanctumによるToken認証で、ReactとLaravel間の認証状態を連携",
+      "Eager Loading・withCountを利用し、商品詳細取得時の不要なSQL発行を抑制",
+      "いいね登録・解除後にStateを更新し、画面再読み込みなしで状態を反映",
+      "ローカル・本番環境で扱えるよう、画像URLとAPI接続先を整理",
     ],
+
     struggled: [
-      "購入完了後の在庫状態管理と表示切り替えの整合性",
-      "複数画像のアップロードとプレビュー表示の実装",
+      "Blade中心の既存構成を崩さずに、React向けAPIを追加する構成整理に苦労した",
+      "LaravelとReact間のToken認証について、ログイン状態とBearer Tokenの扱いを調整した",
+      "商品詳細で複数の関連データを取得する際、N+1を避けながら必要情報をまとめて取得するよう調整した",
+      "Railway・Vercel公開時に、API接続先・画像URL・認証処理など環境差を調整した",
     ],
+
     img: "https://images.unsplash.com/photo-1539278383962-a7774385fa02?w=900&h=500&fit=crop&auto=format",
+
     github: "https://github.com/shoyama1010/tech-furima",
+
     demo: "https://tech-furima-production.up.railway.app",
   },
 
