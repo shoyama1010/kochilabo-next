@@ -85,6 +85,7 @@ export default function Works() {
         ))}
       </div>
 
+
       {/* その他の制作物 */}
       <div className="border border-border rounded-xl bg-card overflow-hidden">
         <div className="px-7 py-5 border-b border-border">
@@ -107,7 +108,7 @@ export default function Works() {
 
         {OTHER_WORKS.map((w, i) => (
           <div
-            key={w.title}
+            key={w.slug}
             className={`px-7 py-5 ${i < OTHER_WORKS.length - 1
                 ? "border-b border-border"
                 : ""
@@ -115,45 +116,60 @@ export default function Works() {
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1">
+                {/* 使用技術 */}
                 <div className="flex flex-wrap gap-1.5 mb-2">
                   {w.tags.map((t) => (
                     <Tag key={t} text={t} />
                   ))}
                 </div>
 
+                {/* タイトル */}
                 <h3 className="font-semibold text-sm mb-1">
                   {w.title}
                 </h3>
 
-                <p className="text-xs text-muted-foreground">
+                {/* 概要 */}
+                <p className="text-xs text-muted-foreground leading-relaxed mb-3">
                   {w.desc}
                 </p>
+
+                {/* 詳細ページ */}
+                <Link
+                  href={`/works/${w.slug}`}
+                  className="inline-flex items-center gap-1 text-xs font-mono text-primary hover:underline"
+                >
+                  詳細ページへ →
+                </Link>
               </div>
 
-              <a
-                href={w.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-mono text-primary flex items-center gap-1.5 shrink-0 hover:opacity-70 transition-opacity"
-              >
-                <Github size={13} />
-                GitHub
-              </a>
-
-              {w.demo && (
+              {/* GitHub / Demo */}
+              <div className="flex items-center gap-4 shrink-0">
                 <a
-                  href={w.demo}
+                  href={w.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1.5 text-xs font-mono text-primary hover:underline"
+                  className="text-xs font-mono text-primary flex items-center gap-1.5 hover:opacity-70 transition-opacity"
                 >
-                  Demo ↗
+                  <Github size={13} />
+                  GitHub
                 </a>
-              )}
+
+                {w.demo && (
+                  <a
+                    href={w.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 text-xs font-mono text-primary hover:underline"
+                  >
+                    Demo ↗
+                  </a>
+                )}
+              </div>
             </div>
           </div>
         ))}
       </div>
+      
     </section>
   );
 }

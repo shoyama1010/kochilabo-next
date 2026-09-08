@@ -5,11 +5,14 @@ import Link from "next/link";
 import { Github, ExternalLink } from "lucide-react";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { Tag } from "@/components/Tag";
-import { WORKS } from "@/data/portfolio";
+import { WORKS, OTHER_WORKS } from "@/data/portfolio";
 
 // メイン作品のみ詳細ページを生成
 export function generateStaticParams() {
-  return WORKS.map((w) => ({ slug: w.slug }));
+  // return WORKS.map((w) => ({ slug: w.slug }));
+  return [...WORKS, ...OTHER_WORKS].map((w) => ({
+    slug: w.slug,
+  }));
 }
 
 export async function generateMetadata({
@@ -19,7 +22,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const work = WORKS.find((w) => w.slug === slug);
+  const allWorks = [...WORKS, ...OTHER_WORKS];
+
+  const work = allWorks.find((w) => w.slug === slug);
 
   if (!work) return {};
 
@@ -36,7 +41,8 @@ export default async function WorkDetail({
 }) {
   const { slug } = await params;
 
-  const work = WORKS.find((w) => w.slug === slug);
+  const allWorks = [...WORKS, ...OTHER_WORKS];
+  const work = allWorks.find((w) => w.slug === slug);
 
   if (!work) notFound();
 

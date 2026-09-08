@@ -13,9 +13,8 @@ export const SKILLS = [
     sub: "React / Next.js",
     desc: "JavaScript / React / Next.js を用いたレスポンシブ対応サイト制作。ReactによるSPA開発やコンポーネント設計について、学習及び実務に近い個人開発をしています。",
     tags: [
-      "HTML",
-      "CSS",
       "JavaScript",
+      "TypeScript",
       "Node.js",
       "React",
       "Next.js",
@@ -247,7 +246,7 @@ export const WORKS: Work[] = [
       "Laravel 8.4",
       "nginx 1.21.1",
       "PHP 8.0",
-      "html/css",
+      "HTML/CSS",
       "MySQL 8.0.26",
       "FormRequest",
       "Fortify",
@@ -306,18 +305,19 @@ export const OTHER_WORKS: Work[] = [
   {
     slug: "fruit-furima",
     title: "フルーツ販売アプリ",
-    subtitle: "商品一覧・検索・登録機能を備えた販売サイト",
+    subtitle: "Laravel REST API × Next.jsによるSPA構成の販売アプリ",
     tags: [
-      "Laravel",
+      "Laravel 8",
       "Nginx 1.21.1",
-      "PHP8.0",
-      "CSS(Tailwind CSS)",
+      "PHP 8.0",
+      "Tailwind CSS",
       "MySQL 8.0.26",
-      "Api/Sanctum",
-      "storage",
+      "Sanctum",
       "FormRequest",
+      "Storage",
       "Node.js",
-      "Next.js",
+      "Next.js 14",
+      "React",
       "TypeScript",
       "SPA",
       "REST API",
@@ -325,47 +325,101 @@ export const OTHER_WORKS: Work[] = [
       "Vercel",
     ],
 
-    desc: "EC機能を持つフルーツ販売サイト。商品一覧・商品検索・商品登録などを実装しました。今後本番環境を充実させる予定です。",
+    desc: "Laravel REST APIとNext.jsを分離したSPA構成のフルーツ販売アプリです。\n商品CRUD・検索・ソート・ページネーション・画像アップロード・プロフィール機能を実装し、認証・認可を含むAPI連携に取り組みました。",
+
+    assumedIssue: [
+      "商品一覧・検索・登録・編集・削除を、フロントエンドとAPIを分離した構成で実装する必要がある",
+      "認証が必要な画面では、未ログインユーザーのアクセスを制御する必要がある",
+      "他ユーザーの商品を編集・削除できないよう、所有者ごとの認可制御が必要",
+      "ローカル環境と本番環境で異なる画像URLや認証方式にも対応する必要がある",
+    ],
+
+    approach: [
+      "LaravelをREST API、Next.jsをフロントエンドとして分離し、SPA構成で実装",
+      "検索・ソート・ページネーションをAPIと連携し、商品一覧へ動的に反映",
+      "商品編集・削除では所有者チェックを行い、他ユーザーの操作を403で制御",
+      "ローカルではCookie認証を検証し、本番環境ではPersonal Access Token認証へ切り替え",
+      "商品画像の保存先やURL生成処理を整理し、Railway・Vercel環境でも表示できるよう調整",
+    ],
+
     devised: [
-      "商品一覧と検索機能を分かりやすく整理",
-      "商品登録機能を実装し、管理しやすい構成にしました",
+      "商品CRUD・検索・ソート・ページネーションをAPI経由で一貫して操作できる構成にした",
+      "認証が必要な画面でログイン状態を確認し、未認証時の画面遷移を制御",
+      "商品編集・削除時に所有者チェックを行い、不正な操作を防止",
+      "固定画像と投稿画像で異なるURL形式を共通処理で切り替える構成にした",
+      "LaravelとNext.jsを分離し、RailwayとVercelへそれぞれデプロイ",
     ],
+
     struggled: [
-      "商品情報の登録と一覧表示のつながりを整理する点に苦労しました",
-      "検索結果が分かりやすく表示されるよう調整しました",
+      "VercelとRailwayの別ドメイン構成でCookie認証を維持できず、Token認証へ切り替えた",
+      "本番環境で画像が表示されない問題を、DBの画像パス・Storage・URL生成処理に分けて調査した",
+      "商品一覧・詳細・編集・マイページごとに残っていた画像URL生成処理を統一した",
+      "Railway再デプロイ後の画像保持について、VolumeやSeeder画像を含めて構成を調整した",
     ],
+
     img: "https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=900&h=500&fit=crop&auto=format",
+
     github: "https://github.com/shoyama1010/fruit-furima-spa",
     demo: "https://fruit-furima-frontend.vercel.app/login",
   },
+
   {
-    slug: "BODY-control",
-    title: "体重管理アプリ(BODYCON)",
-    subtitle: "体重記録・分析用の管理アプリ",
+    slug: "bodycon",
+    title: "体重管理アプリ（BODYCON）",
+    subtitle: "体重・運動記録を分析できる健康管理アプリ",
     tags: [
       "Laravel 8",
       "Nginx 1.21.1",
       "PHP 7.4.9",
-      "html/css",
+      "HTML/CSS",
       "MySQL 8.0.26",
       "JavaScript",
       "Fortify",
+      "FormRequest",
       "Chart.js",
+      "PHPUnit",
       "Railway",
     ],
-    desc: "体重変化を記録・分析するために作成。CSV出力やレポート機能も実装し、データを活用しやすくしています。今後UI機能やデータのchart形式にも充実させる予定です",
-    devised: [
-      "体重データを日付ごとに管理できるように実装",
-      "入力・一覧・編集の流れを分かりやすく整理",
+
+    desc: "日々の体重・摂取カロリー・運動内容を記録し、目標体重の管理や検索、CSV出力、レポート・グラフ表示まで行える体重管理アプリです。\nLaravelを中心に、記録するだけでなく蓄積したデータを分析・可視化できる構成を意識して開発しました。",
+
+    assumedIssue: [
+      "日々の体重・摂取カロリー・運動内容を継続的に記録できる仕組みが必要",
+      "目標体重と現在の体重を比較しながら、変化を確認できる必要がある",
+      "蓄積した体重データを検索・集計し、健康管理に活用できる必要がある",
+      "登録・更新時の入力値を適切に検証し、データの整合性を保つ必要がある",
     ],
+
+    approach: [
+      "users・weight_logs・weight_targetを分離し、ユーザーごとの目標体重と日々の記録を管理",
+      "日付範囲による検索機能を実装し、対象期間の体重記録を絞り込み",
+      "CSVエクスポート機能を追加し、蓄積データを外部でも利用できる構成にした",
+      "AVG・COUNT・GROUP BYを利用し、平均値・最大値・最小値・月別平均を集計",
+      "Chart.jsを利用して体重推移をグラフ化し、数値だけでなく視覚的にも確認できるようにした",
+      "Feature Testを実装し、一覧表示・登録・バリデーション・更新処理を検証",
+    ],
+
+    devised: [
+      "JavaScriptを利用し、一覧画面上から体重ログを登録できるモーダル画面を実装",
+      "FormRequestで登録・更新時の入力バリデーションを共通化",
+      "日付範囲検索により、必要な期間の体重データを確認できるようにした",
+      "CSV出力に加え、平均値・最大値・最小値・月別平均を表示するレポート機能を実装",
+      "Chart.jsを利用し、体重推移をグラフとして可視化",
+      "Feature Testで主要なCRUD・バリデーション処理を確認",
+    ],
+
     struggled: [
-      "記録データの表示と更新処理の整合性を保つ点に苦労しました",
-      "入力フォームと一覧表示の使いやすさを調整しました",
+      "Laravelの画面遷移と連携しながら、JavaScriptでモーダルの表示状態を制御する点",
+      "体重ログ更新時に、FormRequestのバリデーションとControllerの更新処理を整合させる点",
+      "運動時間など入力形式の違いによるバリデーションエラーを整理する点",
+      "月別平均レポートでAVG・COUNT・GROUP BYを利用し、集計結果を画面表示につなげる点",
+      "集計した体重データをChart.jsへ渡し、時系列グラフとして正しく表示する点",
     ],
 
     img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=900&h=500&fit=crop&auto=format",
+
     github: "https://github.com/shoyama1010/weight-control",
-    demo: "https://weight-control-production.up.railway.app",
+    demo: "https://weight-control-production.up.railway.app/",
   },
 ];
 
