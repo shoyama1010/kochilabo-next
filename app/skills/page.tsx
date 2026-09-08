@@ -26,12 +26,13 @@ export default function Skills() {
       {/* スキル概要 */}
       <div className="mb-10 max-w-4xl">
         <p className="text-sm text-muted-foreground leading-relaxed">
-          今後は新しいLaravelバージョンも取り入れながら、
-          API設計・テスト・フロントエンド分離を含め、
-          より実務を意識した開発力の向上に取り組んでいます。
+          Laravel / PHPを中心にWebアプリケーションを開発しています。
+          認証・認可、CRUD、検索、管理画面、REST API、Feature Testなどを実装し、
+          React / Next.js / TypeScriptを用いたフロントエンド分離やSPA開発にも取り組んでいます。
+          Docker・GitHubを利用した開発環境構築や、本番環境へのデプロイも経験しています。
         </p>
       </div>
-
+      
 
       {/* スキルカード*/}
       <div className="grid md:grid-cols-3 gap-6">
@@ -43,7 +44,10 @@ export default function Skills() {
             <div className="text-primary mb-5">{iconMap[s.icon]}</div>
             <p className="text-xs font-mono text-primary mb-1">{s.sub}</p>
             <h2 className="font-bold text-base mb-3">{s.title}</h2>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-5">{s.desc}</p>
+
+            <p className="text-xs text-muted-foreground leading-relaxed mb-5 whitespace-pre-line">
+              {s.desc}
+              </p>
             <div className="flex flex-wrap gap-1.5">
               {s.tags.map((t) => (
                 <Tag key={t} text={t} />
