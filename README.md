@@ -57,7 +57,7 @@ PHP / Laravelを中心としたバックエンド開発に加え、React / Next.
 
 # 使用技術
 - Ｎext.js
-- Tailwind CSS(SSG仕様)
+- Tailwind CSS
 - TypeScript
 - Vercel
 
