@@ -195,18 +195,27 @@ export default async function WorkDetail({
                 </a>
               )}
 
-              {work.demo && (
-                <a
-                  href={work.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-primary hover:opacity-70"
-                >
-                  Demo Site
-                </a>
+              {/* {work.slug === "drugs-stock" ? ( */}
+              {/* {work.slug === "zaiko" ? ( */}
+              {["zaiko", "store-rese"].includes(work.slug) ? (
+                work.demo && (
+                  <a
+                    href={work.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    // className="inline-flex items-center gap-2 text-primary hover:opacity-70"
+                    className="inline-flex items-center gap-2 text-primary"
+                  >
+                    Demo Site
+                  </a>
+                )
+              ) : (
+                <p className="text-gray-400">
+                  🔧 現在調整中
+                </p>
               )}
             </div>
-           
+
             {/* 作品一覧へ戻る */}
             <div className="mt-10">
               <Link
