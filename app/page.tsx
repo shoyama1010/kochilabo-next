@@ -239,13 +239,14 @@ export default function Home() {
           <p className="text-xs font-mono text-primary mb-3 tracking-widest">// Contact</p>
           <h2 className="text-2xl font-bold mb-4">お気軽にお問い合わせください</h2>
           <p className="text-muted-foreground text-sm mb-8">
-            プロジェクト推進に役立つスキルを習得中です！アプリ制作に励んでおりますので、よろしくお願いします！
+            プロジェクト推進に役立つスキルによりアプリ制作に励んでおります。
+            細かな環境構築やコード改修などありましたら、対応いたしますので、よろしくお願いします！
           </p>
           <Link
             href="/contact"
             className="bg-primary text-primary-foreground px-8 py-3 text-sm font-medium rounded hover:opacity-90 transition-opacity inline-flex items-center gap-2"
           >
-            <Mail size={16} /> お問い合わせフォームへ
+            <Mail size={16} /> (現在,PHP関連の環境調整中ですので)お問い合わせフォームへ
           </Link>
         </div>
       </section>

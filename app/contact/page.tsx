@@ -28,12 +28,10 @@ export default function Contact() {
       <p className="text-muted-foreground text-sm leading-relaxed mb-8">
         ポートフォリオをご覧いただきありがとうございます。
         <br />
-        {/* Webアプリケーションの開発・改修に対応しております。 */}
+       
         Laravelを中心としたWebアプリケーション開発に取り組んでいます。
         <br />
-        {/* Laravelを中心としたバックエンド開発や、React / Next.jsを用いたフロントエンド開発など */}
-        {/* <br /> */}
-        {/* お仕事のご相談がございましたらお気軽にお問い合わせください。 */}
+        
         Webサイト・Webアプリの開発や改修などのお仕事のご相談がございましたら、お気軽にお問い合わせください。
         <br />
         皆様からのご連絡を心よりお待ちしております。
