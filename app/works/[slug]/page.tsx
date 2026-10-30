@@ -195,9 +195,7 @@ export default async function WorkDetail({
                 </a>
               )}
 
-              {/* {work.slug === "drugs-stock" ? ( */}
-              {/* {work.slug === "zaiko" ? ( */}
-              {["zaiko", "store-rese"].includes(work.slug) ? (
+              {["zaiko","workflow","store-rese"].includes(work.slug) ? (
                 work.demo && (
                   <a
                     href={work.demo}
