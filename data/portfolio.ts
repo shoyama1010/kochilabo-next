@@ -80,7 +80,7 @@ export const WORKS: Work[] = [
     subtitle: "医薬品及び日用品在庫管理システム",
     tags: [
       "Laravel 10",
-      "PHP 8.0",
+      "PHP 8.2.35",
       "MySQL 8.0.26",
       "REST API",
       "React",
@@ -141,7 +141,7 @@ export const WORKS: Work[] = [
     subtitle: "従業員・管理者向け勤怠管理システム（Laravel × Next.js）",
     tags: [
       "Laravel 8",
-      "PHP 8.0",
+      "PHP 8.2.35",
       "MySQL 8.0.26",
       "Sanctum",
       "API連携",
