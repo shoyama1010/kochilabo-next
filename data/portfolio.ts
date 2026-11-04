@@ -197,7 +197,7 @@ export const WORKS: Work[] = [
     subtitle: "出品・購入・いいね・コメントを備えたCtoCマーケットプレイス",
     tags: [
       "Laravel 8",
-      "PHP 8.2",
+      "PHP 8.2.35",
       "MySQL 8.0.26",
       "Sanctum",
       "REST API",
