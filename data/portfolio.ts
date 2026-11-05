@@ -259,7 +259,7 @@ export const WORKS: Work[] = [
     tags: [
       "Laravel 8.4",
       "nginx 1.21.1",
-      "PHP 8.0",
+      "PHP 8.2.35",
       "HTML/CSS",
       "MySQL 8.0.26",
       "FormRequest",
