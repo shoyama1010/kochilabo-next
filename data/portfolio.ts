@@ -323,7 +323,7 @@ export const OTHER_WORKS: Work[] = [
     tags: [
       "Laravel 8",
       "Nginx 1.21.1",
-      "PHP 8.0",
+      "PHP 8.2.35",
       "Tailwind CSS",
       "MySQL 8.0.26",
       "Sanctum",
